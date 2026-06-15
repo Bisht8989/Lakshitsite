@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lakshita Bisht | IT Professional & Embedded Systems Designer</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', sans-serif; background: #f9f9fc; color: #222; }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(160deg, #ff6b9d, #c44dff, #4d79ff);
+    padding: 70px 30px 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .blob { position: absolute; border-radius: 50%; opacity: 0.18; filter: blur(40px); }
+  .blob1 { width: 300px; height: 300px; background: #fff; top: -80px; left: -60px; }
+  .blob2 { width: 200px; height: 200px; background: #fff; bottom: -40px; right: -40px; }
+  .avatar {
+    width: 90px; height: 90px; border-radius: 50%;
+    background: rgba(255,255,255,0.25);
+    border: 3px solid rgba(255,255,255,0.6);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 32px; font-weight: 700; color: #fff;
+    position: relative; z-index: 1;
+  }
+  .hero h1 { font-size: 42px; font-weight: 700; color: #fff; position: relative; z-index: 1; margin-bottom: 6px; }
+  .hero-sub { font-size: 16px; color: rgba(255,255,255,0.85); margin-bottom: 10px; position: relative; z-index: 1; }
+  .hero-loc { font-size: 13px; color: rgba(255,255,255,0.7); margin-bottom: 24px; position: relative; z-index: 1; }
+  .hero-loc i { vertical-align: -2px; margin-right: 4px; }
+  .hero-desc {
+    font-size: 15px; color: rgba(255,255,255,0.85);
+    max-width: 500px; margin: 0 auto 28px;
+    line-height: 1.8; position: relative; z-index: 1;
+  }
+  .badge-row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+  .badge {
+    background: rgba(255,255,255,0.2); color: #fff;
+    font-size: 12px; padding: 6px 16px; border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.35);
+  }
+
+  /* NAV */
+  nav {
+    display: flex; justify-content: center; gap: 36px;
+    padding: 18px; background: #fff;
+    border-bottom: 1px solid #eee;
+    position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  nav a { font-size: 14px; color: #666; text-decoration: none; font-weight: 500; }
+  nav a:hover { color: #c44dff; }
+
+  /* MAIN */
+  .main { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+  .sec { padding: 50px 0 0; }
+  .sec-head { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; }
+  .sec-icon {
+    width: 36px; height: 36px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center; font-size: 18px;
+  }
+  .sec-icon.purple { background: #EEEDFE; color: #534AB7; }
+  .sec-icon.pink { background: #FBEAF0; color: #993556; }
+  .sec-icon.blue { background: #E6F1FB; color: #185FA5; }
+  .sec-title { font-size: 22px; font-weight: 600; color: #222; }
+
+  /* ABOUT */
+  .about-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .acard {
+    border-radius: 12px; padding: 20px;
+    border: 1px solid #eee; background: #fff;
+  }
+  .acard-top { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .acard-dot { width: 8px; height: 8px; border-radius: 50%; }
+  .acard h4 { font-size: 14px; font-weight: 600; color: #222; }
+  .acard p { font-size: 13px; color: #666; line-height: 1.7; }
+
+  /* SKILLS */
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
+  .skill {
+    background: #fff; border-radius: 10px;
+    padding: 16px 18px; border: 1px solid #eee;
+  }
+  .skill i { font-size: 22px; margin-bottom: 8px; display: block; }
+  .skill span { font-size: 13px; color: #333; font-weight: 500; }
+
+  /* PROJECTS */
+  .proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .proj { border-radius: 14px; overflow: hidden; border: 1px solid #eee; background: #fff; }
+  .proj-top { padding: 24px 20px 18px; }
+  .proj-top.pink { background: linear-gradient(135deg, #FBEAF0, #F4C0D1); }
+  .proj-top.blue { background: linear-gradient(135deg, #E6F1FB, #B5D4F4); }
+  .proj-top i { font-size: 30px; margin-bottom: 12px; display: block; }
+  .proj-top.pink i { color: #993556; }
+  .proj-top.blue i { color: #185FA5; }
+  .proj-top h3 { font-size: 16px; font-weight: 600; color: #222; }
+  .proj-body { padding: 16px 20px; }
+  .proj-body p { font-size: 13px; color: #666; line-height: 1.7; margin-bottom: 12px; }
+  .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px; padding: 4px 10px; border-radius: 20px;
+    background: #f3f3f3; color: #555;
+  }
+
+  /* CONTACT */
+  .contact-sec { padding: 44px 0 60px; }
+  .contact-card {
+    background: linear-gradient(135deg, #f8f0ff, #ffe0f0);
+    border-radius: 16px; padding: 40px;
+    text-align: center; border: 1px solid #F4C0D1;
+  }
+  .contact-card h3 { font-size: 24px; font-weight: 600; color: #534AB7; margin-bottom: 8px; }
+  .contact-card p { font-size: 14px; color: #993556; margin-bottom: 26px; }
+  .clinks { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .clink {
+    display: flex; align-items: center; gap: 8px;
+    background: #fff; color: #534AB7;
+    font-size: 13px; padding: 10px 20px;
+    border-radius: 10px; border: 1px solid #AFA9EC;
+    text-decoration: none; font-weight: 500;
+  }
+  .clink:hover { background: #EEEDFE; }
+  .clink i { font-size: 16px; }
+
+  /* FOOTER */
+  .divider { height: 1px; background: #eee; margin: 40px 0 0; }
+  footer { text-align: center; padding: 24px; font-size: 12px; color: #999; }
+
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 30px; }
+    .about-cards, .proj-grid { grid-template-columns: 1fr; }
+    nav { gap: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="avatar">LB</div>
+  <h1>Lakshita Bisht</h1>
+  <p class="hero-sub">IT Professional · Embedded Systems Designer</p>
+  <p class="hero-loc"><i class="ti ti-map-pin"></i> Almora, Uttarakhand</p>
+  <p class="hero-desc">Passionate about building smart, safety-focused technology. I turn ideas into real embedded systems that solve everyday problems.</p>
+  <div class="badge-row">
+    <span class="badge">🎓 IT Diploma</span>
+    <span class="badge">⏱ 3 Years Experience</span>
+    <span class="badge">💡 Embedded Systems</span>
+  </div>
+</div>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="main">
+
+  <div class="sec" id="about">
+    <div class="sec-head">
+      <div class="sec-icon purple"><i class="ti ti-user"></i></div>
+      <h2 class="sec-title">About Me</h2>
+    </div>
+    <div class="about-cards">
+      <div class="acard">
+        <div class="acard-top"><div class="acard-dot" style="background:#c44dff"></div><h4>Who I am</h4></div>
+        <p>A creative IT diploma holder from the beautiful hills of Almora, Uttarakhand with 3 years of hands-on technical experience.</p>
+      </div>
+      <div class="acard">
+        <div class="acard-top"><div class="acard-dot" style="background:#ff6b9d"></div><h4>What I do</h4></div>
+        <p>I design embedded systems and IoT-based solutions focused on safety and innovation — bridging hardware with smart logic.</p>
+      </div>
+      <div class="acard">
+        <div class="acard-top"><div class="acard-dot" style="background:#4d79ff"></div><h4>My passion</h4></div>
+        <p>Design thinking meets technology — I love creating products that are both functional and visually thoughtful.</p>
+      </div>
+      <div class="acard">
+        <div class="acard-top"><div class="acard-dot" style="background:#ff9d4d"></div><h4>My goal</h4></div>
+        <p>To grow as an IT professional and contribute to projects that make a real difference in people's lives through smart tech.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="sec" id="skills">
+    <div class="sec-head">
+      <div class="sec-icon pink"><i class="ti ti-stars"></i></div>
+      <h2 class="sec-title">Skills</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill"><i class="ti ti-cpu" style="color:#534AB7"></i><span>Embedded Systems</span></div>
+      <div class="skill"><i class="ti ti-wifi" style="color:#185FA5"></i><span>IoT Design</span></div>
+      <div class="skill"><i class="ti ti-circuit-board" style="color:#993556"></i><span>Circuit Design</span></div>
+      <div class="skill"><i class="ti ti-radar" style="color:#3B6D11"></i><span>Sensor Integration</span></div>
+      <div class="skill"><i class="ti ti-tools" style="color:#BA7517"></i><span>Prototyping</span></div>
+      <div class="skill"><i class="ti ti-device-desktop" style="color:#185FA5"></i><span>IT Fundamentals</span></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="sec" id="projects">
+    <div class="sec-head">
+      <div class="sec-icon blue"><i class="ti ti-briefcase"></i></div>
+      <h2 class="sec-title">Projects</h2>
+    </div>
+    <div class="proj-grid">
+      <div class="proj">
+        <div class="proj-top pink">
+          <i class="ti ti-helmet"></i>
+          <h3>Smart Helmet — Alcohol Detection</h3>
+        </div>
+        <div class="proj-body">
+          <p>An intelligent helmet that detects alcohol in the rider and prevents the vehicle from starting — making roads safer for everyone.</p>
+          <div class="tags">
+            <span class="tag">Embedded</span>
+            <span class="tag">Sensor Tech</span>
+            <span class="tag">Safety</span>
+          </div>
+        </div>
+      </div>
+      <div class="proj">
+        <div class="proj-top blue">
+          <i class="ti ti-flame"></i>
+          <h3>Gas Alert System</h3>
+        </div>
+        <div class="proj-body">
+          <p>Real-time gas leakage detection system that triggers instant alerts to protect homes and industries from hazardous accidents.</p>
+          <div class="tags">
+            <span class="tag">IoT</span>
+            <span class="tag">Alert System</span>
+            <span class="tag">Safety</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-sec" id="contact">
+    <div class="contact-card">
+      <h3>Let's work together!</h3>
+      <p>Open to projects, collaborations, and opportunities 🌸</p>
+      <div class="clinks">
+        <a href="mailto:lakshita@email.com" class="clink"><i class="ti ti-mail"></i> Email Me</a>
+        <a href="https://linkedin.com" class="clink"><i class="ti ti-brand-linkedin"></i> LinkedIn</a>
+        <a class="clink"><i class="ti ti-map-pin"></i> Almora, Uttarakhand</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+<footer>© 2026 Lakshita Bisht · Made with love from Uttarakhand 🏔️</footer>
+
+</body>
+</html>
