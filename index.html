@@ -136,3 +136,170 @@
   .clinks { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
   .clink {
     display: flex; align-items: center; gap: 8px;
+    background: #fff; color: #111;
+    font-size: 13px; padding: 10px 20px;
+    border-radius: 10px; border: 1px solid #fff;
+    text-decoration: none; font-weight: 500;
+    transition: opacity 0.2s;
+  }
+  .clink:hover { opacity: 0.8; }
+  .clink i { font-size: 16px; }
+
+  /* FOOTER */
+  .divider { height: 1px; background: #ececec; margin: 40px 0 0; }
+  footer { text-align: center; padding: 24px; font-size: 12px; color: #999; }
+
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 30px; }
+    .about-cards, .proj-grid { grid-template-columns: 1fr; }
+    nav { gap: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="avatar">LB</div>
+  <h1>Lakshita Bisht</h1>
+  <p class="hero-sub">IT Professional · Embedded Systems Designer</p>
+  <p class="hero-loc"><i class="ti ti-map-pin"></i> Almora, Uttarakhand</p>
+  <p class="hero-desc">Passionate about building smart, safety-focused technology. I turn ideas into real embedded systems that solve everyday problems.</p>
+  <div class="badge-row">
+    <span class="badge">🎓 IT Diploma</span>
+    <span class="badge">⏱ 3 Years Experience</span>
+    <span class="badge">💡 Embedded Systems</span>
+  </div>
+</div>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#freelance">Freelance</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="main">
+
+  <div class="sec" id="about">
+    <div class="sec-head">
+      <div class="sec-icon"><i class="ti ti-user"></i></div>
+      <h2 class="sec-title">About Me</h2>
+    </div>
+    <div class="about-cards">
+      <div class="acard">
+        <div class="acard-top"><div class="acard-dot"></div><h4>Who I am</h4></div>
+        <p>A creative IT diploma holder from the beautiful hills of Almora, Uttarakhand with 3 years of hands-on technical experience.</p>
+      </div>
+      <div class="acard">
+        <div class="acard-top"><div class="acard-dot"></div><h4>What I do</h4></div>
+        <p>I design embedded systems and IoT-based solutions focused on safety and innovation — bridging hardware with smart logic.</p>
+      </div>
+      <div class="acard">
+        <div class="acard-top"><div class="acard-dot"></div><h4>My passion</h4></div>
+        <p>Design thinking meets technology — I love creating products that are both functional and visually thoughtful.</p>
+      </div>
+      <div class="acard">
+        <div class="acard-top"><div class="acard-dot"></div><h4>My goal</h4></div>
+        <p>To grow as an IT professional and contribute to projects that make a real difference in people's lives through smart tech.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="sec" id="skills">
+    <div class="sec-head">
+      <div class="sec-icon"><i class="ti ti-stars"></i></div>
+      <h2 class="sec-title">Skills</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill"><i class="ti ti-brand-figma"></i><span>Figma</span></div>
+      <div class="skill"><i class="ti ti-palette"></i><span>Canva</span></div>
+      <div class="skill"><i class="ti ti-cpu"></i><span>Embedded Systems</span></div>
+      <div class="skill"><i class="ti ti-wifi"></i><span>IoT Design</span></div>
+      <div class="skill"><i class="ti ti-circuit-board"></i><span>Circuit Design</span></div>
+      <div class="skill"><i class="ti ti-radar"></i><span>Sensor Integration</span></div>
+      <div class="skill"><i class="ti ti-tools"></i><span>Prototyping</span></div>
+      <div class="skill"><i class="ti ti-device-desktop"></i><span>IT Fundamentals</span></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="sec" id="freelance">
+    <div class="sec-head">
+      <div class="sec-icon"><i class="ti ti-briefcase-2"></i></div>
+      <h2 class="sec-title">Freelance</h2>
+    </div>
+    <div class="freelance-card">
+      <p>💻 I am currently learning <strong>web development</strong> and taking my first steps into freelancing. While I don't have formal client experience yet, I am highly motivated, a fast learner, and fully committed to delivering quality work on any project I take on.</p>
+      <div class="freelance-tags">
+        <span class="ftag">Web Development (Learning)</span>
+        <span class="ftag">Available for Projects</span>
+        <span class="ftag">Quick Learner</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="sec" id="projects">
+    <div class="sec-head">
+      <div class="sec-icon"><i class="ti ti-briefcase"></i></div>
+      <h2 class="sec-title">Projects</h2>
+    </div>
+    <div class="proj-grid">
+      <div class="proj">
+        <div class="proj-top">
+          <i class="ti ti-helmet"></i>
+          <h3>Smart Helmet — Alcohol Detection</h3>
+        </div>
+        <div class="proj-body">
+          <p>An intelligent helmet that detects alcohol in the rider and prevents the vehicle from starting — making roads safer for everyone.</p>
+          <div class="tags">
+            <span class="tag">Embedded</span>
+            <span class="tag">Sensor Tech</span>
+            <span class="tag">Safety</span>
+          </div>
+        </div>
+      </div>
+      <div class="proj">
+        <div class="proj-top">
+          <i class="ti ti-flame"></i>
+          <h3>Gas Alert System</h3>
+        </div>
+        <div class="proj-body">
+          <p>Real-time gas leakage detection system that triggers instant alerts to protect homes and industries from hazardous accidents.</p>
+          <div class="tags">
+            <span class="tag">IoT</span>
+            <span class="tag">Alert System</span>
+            <span class="tag">Safety</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-sec" id="contact">
+    <div class="contact-card">
+      <h3>Let's work together!</h3>
+      <p>Open to projects, collaborations, and opportunities 🌸</p>
+      <p class="contact-sub">If you'd like to get your website or project built, feel free to reach out — I'll work on it with full dedication.</p>
+      <div class="clinks">
+        <a href="mailto:lakshita@email.com" class="clink"><i class="ti ti-mail"></i> Email Me</a>
+        <a href="https://linkedin.com" class="clink"><i class="ti ti-brand-linkedin"></i> LinkedIn</a>
+        <a class="clink"><i class="ti ti-map-pin"></i> Almora, Uttarakhand</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+<footer>© 2026 Lakshita Bisht · Made with love from Uttarakhand 🏔️</footer>
+
+</body>
+</html>
