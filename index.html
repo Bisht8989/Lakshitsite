@@ -8,11 +8,11 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Segoe UI', sans-serif; background: #f9f9fc; color: #222; }
+  body { font-family: 'Segoe UI', sans-serif; background: #fdf6f0; color: #2b2b2b; }
 
   /* HERO */
   .hero {
-    background: linear-gradient(160deg, #ff6b9d, #c44dff, #4d79ff);
+    background: linear-gradient(160deg, #ff9a76, #ff6f91, #845ec2);
     padding: 70px 30px 80px;
     text-align: center;
     position: relative;
@@ -29,13 +29,14 @@
     margin: 0 auto 20px;
     font-size: 32px; font-weight: 700; color: #fff;
     position: relative; z-index: 1;
+    overflow: hidden;
   }
   .hero h1 { font-size: 42px; font-weight: 700; color: #fff; position: relative; z-index: 1; margin-bottom: 6px; }
-  .hero-sub { font-size: 16px; color: rgba(255,255,255,0.85); margin-bottom: 10px; position: relative; z-index: 1; }
-  .hero-loc { font-size: 13px; color: rgba(255,255,255,0.7); margin-bottom: 24px; position: relative; z-index: 1; }
+  .hero-sub { font-size: 16px; color: rgba(255,255,255,0.9); margin-bottom: 10px; position: relative; z-index: 1; }
+  .hero-loc { font-size: 13px; color: rgba(255,255,255,0.75); margin-bottom: 24px; position: relative; z-index: 1; }
   .hero-loc i { vertical-align: -2px; margin-right: 4px; }
   .hero-desc {
-    font-size: 15px; color: rgba(255,255,255,0.85);
+    font-size: 15px; color: rgba(255,255,255,0.9);
     max-width: 500px; margin: 0 auto 28px;
     line-height: 1.8; position: relative; z-index: 1;
   }
@@ -50,13 +51,13 @@
   nav {
     display: flex; justify-content: center; gap: 36px;
     padding: 18px; background: #fff;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #f0e4dc;
     position: sticky; top: 0; z-index: 100;
     box-shadow: 0 2px 12px rgba(0,0,0,0.06);
     flex-wrap: wrap;
   }
-  nav a { font-size: 14px; color: #666; text-decoration: none; font-weight: 500; }
-  nav a:hover { color: #c44dff; }
+  nav a { font-size: 14px; color: #7a5c52; text-decoration: none; font-weight: 500; }
+  nav a:hover { color: #ff6f91; }
 
   /* MAIN */
   .main { max-width: 800px; margin: 0 auto; padding: 0 24px; }
@@ -66,87 +67,87 @@
     width: 36px; height: 36px; border-radius: 8px;
     display: flex; align-items: center; justify-content: center; font-size: 18px;
   }
-  .sec-icon.purple { background: #EEEDFE; color: #534AB7; }
-  .sec-icon.pink { background: #FBEAF0; color: #993556; }
-  .sec-icon.blue { background: #E6F1FB; color: #185FA5; }
+  .sec-icon.purple { background: #F1E9FB; color: #845EC2; }
+  .sec-icon.pink { background: #FFE9EE; color: #C9436B; }
+  .sec-icon.blue { background: #FFF1E8; color: #D9762B; }
   .sec-icon.green { background: #E8F8EE; color: #1F8A4C; }
-  .sec-title { font-size: 22px; font-weight: 600; color: #222; }
+  .sec-title { font-size: 22px; font-weight: 600; color: #2b2b2b; }
 
   /* ABOUT */
   .about-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
   .acard {
     border-radius: 12px; padding: 20px;
-    border: 1px solid #eee; background: #fff;
+    border: 1px solid #f0e4dc; background: #fff;
   }
   .acard-top { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
   .acard-dot { width: 8px; height: 8px; border-radius: 50%; }
-  .acard h4 { font-size: 14px; font-weight: 600; color: #222; }
-  .acard p { font-size: 13px; color: #666; line-height: 1.7; }
+  .acard h4 { font-size: 14px; font-weight: 600; color: #2b2b2b; }
+  .acard p { font-size: 13px; color: #6e6e6e; line-height: 1.7; }
 
   /* SKILLS */
   .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
   .skill {
     background: #fff; border-radius: 10px;
-    padding: 16px 18px; border: 1px solid #eee;
+    padding: 16px 18px; border: 1px solid #f0e4dc;
   }
   .skill i { font-size: 22px; margin-bottom: 8px; display: block; }
   .skill span { font-size: 13px; color: #333; font-weight: 500; }
 
   /* FREELANCE */
   .freelance-card {
-    background: linear-gradient(135deg, #E8F8EE, #d4f3e0);
+    background: linear-gradient(135deg, #FFF1E8, #ffe3d1);
     border-radius: 16px; padding: 30px;
-    border: 1px solid #b8e6c8;
+    border: 1px solid #f3d3b8;
   }
-  .freelance-card p { font-size: 14px; color: #1F5C36; line-height: 1.8; margin-bottom: 14px; }
+  .freelance-card p { font-size: 14px; color: #7a4a1f; line-height: 1.8; margin-bottom: 14px; }
   .freelance-tags { display: flex; gap: 8px; flex-wrap: wrap; }
   .ftag {
     font-size: 12px; padding: 6px 14px; border-radius: 20px;
-    background: #fff; color: #1F8A4C; border: 1px solid #b8e6c8; font-weight: 500;
+    background: #fff; color: #D9762B; border: 1px solid #f3d3b8; font-weight: 500;
   }
 
   /* PROJECTS */
   .proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .proj { border-radius: 14px; overflow: hidden; border: 1px solid #eee; background: #fff; }
+  .proj { border-radius: 14px; overflow: hidden; border: 1px solid #f0e4dc; background: #fff; }
   .proj-top { padding: 24px 20px 18px; }
-  .proj-top.pink { background: linear-gradient(135deg, #FBEAF0, #F4C0D1); }
-  .proj-top.blue { background: linear-gradient(135deg, #E6F1FB, #B5D4F4); }
+  .proj-top.pink { background: linear-gradient(135deg, #FFE9EE, #FFC9D6); }
+  .proj-top.blue { background: linear-gradient(135deg, #F1E9FB, #D8C7F0); }
   .proj-top i { font-size: 30px; margin-bottom: 12px; display: block; }
-  .proj-top.pink i { color: #993556; }
-  .proj-top.blue i { color: #185FA5; }
-  .proj-top h3 { font-size: 16px; font-weight: 600; color: #222; }
+  .proj-top.pink i { color: #C9436B; }
+  .proj-top.blue i { color: #845EC2; }
+  .proj-top h3 { font-size: 16px; font-weight: 600; color: #2b2b2b; }
   .proj-body { padding: 16px 20px; }
-  .proj-body p { font-size: 13px; color: #666; line-height: 1.7; margin-bottom: 12px; }
+  .proj-body p { font-size: 13px; color: #6e6e6e; line-height: 1.7; margin-bottom: 12px; }
   .tags { display: flex; gap: 6px; flex-wrap: wrap; }
   .tag {
     font-size: 11px; padding: 4px 10px; border-radius: 20px;
-    background: #f3f3f3; color: #555;
+    background: #f7f0eb; color: #7a5c52;
   }
 
   /* CONTACT */
   .contact-sec { padding: 44px 0 60px; }
   .contact-card {
-    background: linear-gradient(135deg, #f8f0ff, #ffe0f0);
+    background: linear-gradient(135deg, #FFF1E8, #FFE9EE);
     border-radius: 16px; padding: 40px;
-    text-align: center; border: 1px solid #F4C0D1;
+    text-align: center; border: 1px solid #f3d3b8;
   }
-  .contact-card h3 { font-size: 24px; font-weight: 600; color: #534AB7; margin-bottom: 8px; }
-  .contact-card p { font-size: 14px; color: #993556; margin-bottom: 10px; }
-  .contact-card .contact-sub { font-size: 13px; color: #7a3a5c; margin-bottom: 26px; }
+  .contact-card h3 { font-size: 24px; font-weight: 600; color: #845EC2; margin-bottom: 8px; }
+  .contact-card p { font-size: 14px; color: #C9436B; margin-bottom: 10px; }
+  .contact-card .contact-sub { font-size: 13px; color: #a15a3a; margin-bottom: 26px; }
   .clinks { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
   .clink {
     display: flex; align-items: center; gap: 8px;
-    background: #fff; color: #534AB7;
+    background: #fff; color: #845EC2;
     font-size: 13px; padding: 10px 20px;
-    border-radius: 10px; border: 1px solid #AFA9EC;
+    border-radius: 10px; border: 1px solid #d8c7f0;
     text-decoration: none; font-weight: 500;
   }
-  .clink:hover { background: #EEEDFE; }
+  .clink:hover { background: #F1E9FB; }
   .clink i { font-size: 16px; }
 
   /* FOOTER */
-  .divider { height: 1px; background: #eee; margin: 40px 0 0; }
-  footer { text-align: center; padding: 24px; font-size: 12px; color: #999; }
+  .divider { height: 1px; background: #f0e4dc; margin: 40px 0 0; }
+  footer { text-align: center; padding: 24px; font-size: 12px; color: #a8978d; }
 
   @media (max-width: 600px) {
     .hero h1 { font-size: 30px; }
@@ -189,19 +190,19 @@
     </div>
     <div class="about-cards">
       <div class="acard">
-        <div class="acard-top"><div class="acard-dot" style="background:#c44dff"></div><h4>Who I am</h4></div>
+        <div class="acard-top"><div class="acard-dot" style="background:#845EC2"></div><h4>Who I am</h4></div>
         <p>A creative IT diploma holder from the beautiful hills of Almora, Uttarakhand with 3 years of hands-on technical experience.</p>
       </div>
       <div class="acard">
-        <div class="acard-top"><div class="acard-dot" style="background:#ff6b9d"></div><h4>What I do</h4></div>
+        <div class="acard-top"><div class="acard-dot" style="background:#ff6f91"></div><h4>What I do</h4></div>
         <p>I design embedded systems and IoT-based solutions focused on safety and innovation — bridging hardware with smart logic.</p>
       </div>
       <div class="acard">
-        <div class="acard-top"><div class="acard-dot" style="background:#4d79ff"></div><h4>My passion</h4></div>
+        <div class="acard-top"><div class="acard-dot" style="background:#ff9a76"></div><h4>My passion</h4></div>
         <p>Design thinking meets technology — I love creating products that are both functional and visually thoughtful.</p>
       </div>
       <div class="acard">
-        <div class="acard-top"><div class="acard-dot" style="background:#ff9d4d"></div><h4>My goal</h4></div>
+        <div class="acard-top"><div class="acard-dot" style="background:#D9762B"></div><h4>My goal</h4></div>
         <p>To grow as an IT professional and contribute to projects that make a real difference in people's lives through smart tech.</p>
       </div>
     </div>
@@ -215,14 +216,14 @@
       <h2 class="sec-title">Skills</h2>
     </div>
     <div class="skills-grid">
-      <div class="skill"><i class="ti ti-brand-figma" style="color:#993556"></i><span>Figma</span></div>
+      <div class="skill"><i class="ti ti-brand-figma" style="color:#C9436B"></i><span>Figma</span></div>
       <div class="skill"><i class="ti ti-palette" style="color:#1F8A4C"></i><span>Canva</span></div>
-      <div class="skill"><i class="ti ti-cpu" style="color:#534AB7"></i><span>Embedded Systems</span></div>
-      <div class="skill"><i class="ti ti-wifi" style="color:#185FA5"></i><span>IoT Design</span></div>
-      <div class="skill"><i class="ti ti-circuit-board" style="color:#993556"></i><span>Circuit Design</span></div>
-      <div class="skill"><i class="ti ti-radar" style="color:#3B6D11"></i><span>Sensor Integration</span></div>
-      <div class="skill"><i class="ti ti-tools" style="color:#BA7517"></i><span>Prototyping</span></div>
-      <div class="skill"><i class="ti ti-device-desktop" style="color:#185FA5"></i><span>IT Fundamentals</span></div>
+      <div class="skill"><i class="ti ti-cpu" style="color:#845EC2"></i><span>Embedded Systems</span></div>
+      <div class="skill"><i class="ti ti-wifi" style="color:#D9762B"></i><span>IoT Design</span></div>
+      <div class="skill"><i class="ti ti-circuit-board" style="color:#C9436B"></i><span>Circuit Design</span></div>
+      <div class="skill"><i class="ti ti-radar" style="color:#1F8A4C"></i><span>Sensor Integration</span></div>
+      <div class="skill"><i class="ti ti-tools" style="color:#D9762B"></i><span>Prototyping</span></div>
+      <div class="skill"><i class="ti ti-device-desktop" style="color:#845EC2"></i><span>IT Fundamentals</span></div>
     </div>
   </div>
 
