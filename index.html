@@ -53,6 +53,7 @@
     border-bottom: 1px solid #eee;
     position: sticky; top: 0; z-index: 100;
     box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    flex-wrap: wrap;
   }
   nav a { font-size: 14px; color: #666; text-decoration: none; font-weight: 500; }
   nav a:hover { color: #c44dff; }
@@ -68,6 +69,7 @@
   .sec-icon.purple { background: #EEEDFE; color: #534AB7; }
   .sec-icon.pink { background: #FBEAF0; color: #993556; }
   .sec-icon.blue { background: #E6F1FB; color: #185FA5; }
+  .sec-icon.green { background: #E8F8EE; color: #1F8A4C; }
   .sec-title { font-size: 22px; font-weight: 600; color: #222; }
 
   /* ABOUT */
@@ -89,6 +91,19 @@
   }
   .skill i { font-size: 22px; margin-bottom: 8px; display: block; }
   .skill span { font-size: 13px; color: #333; font-weight: 500; }
+
+  /* FREELANCE */
+  .freelance-card {
+    background: linear-gradient(135deg, #E8F8EE, #d4f3e0);
+    border-radius: 16px; padding: 30px;
+    border: 1px solid #b8e6c8;
+  }
+  .freelance-card p { font-size: 14px; color: #1F5C36; line-height: 1.8; margin-bottom: 14px; }
+  .freelance-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+  .ftag {
+    font-size: 12px; padding: 6px 14px; border-radius: 20px;
+    background: #fff; color: #1F8A4C; border: 1px solid #b8e6c8; font-weight: 500;
+  }
 
   /* PROJECTS */
   .proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -116,7 +131,8 @@
     text-align: center; border: 1px solid #F4C0D1;
   }
   .contact-card h3 { font-size: 24px; font-weight: 600; color: #534AB7; margin-bottom: 8px; }
-  .contact-card p { font-size: 14px; color: #993556; margin-bottom: 26px; }
+  .contact-card p { font-size: 14px; color: #993556; margin-bottom: 10px; }
+  .contact-card .contact-sub { font-size: 13px; color: #7a3a5c; margin-bottom: 26px; }
   .clinks { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
   .clink {
     display: flex; align-items: center; gap: 8px;
@@ -159,6 +175,7 @@
 <nav>
   <a href="#about">About</a>
   <a href="#skills">Skills</a>
+  <a href="#freelance">Freelance</a>
   <a href="#projects">Projects</a>
   <a href="#contact">Contact</a>
 </nav>
@@ -198,12 +215,31 @@
       <h2 class="sec-title">Skills</h2>
     </div>
     <div class="skills-grid">
+      <div class="skill"><i class="ti ti-brand-figma" style="color:#993556"></i><span>Figma</span></div>
+      <div class="skill"><i class="ti ti-palette" style="color:#1F8A4C"></i><span>Canva</span></div>
       <div class="skill"><i class="ti ti-cpu" style="color:#534AB7"></i><span>Embedded Systems</span></div>
       <div class="skill"><i class="ti ti-wifi" style="color:#185FA5"></i><span>IoT Design</span></div>
       <div class="skill"><i class="ti ti-circuit-board" style="color:#993556"></i><span>Circuit Design</span></div>
       <div class="skill"><i class="ti ti-radar" style="color:#3B6D11"></i><span>Sensor Integration</span></div>
       <div class="skill"><i class="ti ti-tools" style="color:#BA7517"></i><span>Prototyping</span></div>
       <div class="skill"><i class="ti ti-device-desktop" style="color:#185FA5"></i><span>IT Fundamentals</span></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="sec" id="freelance">
+    <div class="sec-head">
+      <div class="sec-icon green"><i class="ti ti-briefcase-2"></i></div>
+      <h2 class="sec-title">Freelance</h2>
+    </div>
+    <div class="freelance-card">
+      <p>💻 Main currently <strong>website banana</strong> seekh rahi hoon aur freelancing ki shuruaat kar rahi hoon. Abhi mujhe formal experience nahi hai, lekin naye projects par kaam karne ke liye main poori tarah taiyaar hoon aur seekhne ke liye enthusiastic hoon!</p>
+      <div class="freelance-tags">
+        <span class="ftag">Web Design (Learning)</span>
+        <span class="ftag">Open to Projects</span>
+        <span class="ftag">Fast Learner</span>
+      </div>
     </div>
   </div>
 
@@ -250,6 +286,7 @@
     <div class="contact-card">
       <h3>Let's work together!</h3>
       <p>Open to projects, collaborations, and opportunities 🌸</p>
+      <p class="contact-sub">Agar aapko apna website ya koi project banwana hai, to bina jhijak mujhse contact karein — main poori dedication ke saath kaam karungi!</p>
       <div class="clinks">
         <a href="mailto:lakshita@email.com" class="clink"><i class="ti ti-mail"></i> Email Me</a>
         <a href="https://linkedin.com" class="clink"><i class="ti ti-brand-linkedin"></i> LinkedIn</a>
